@@ -1,0 +1,20 @@
+/* Estilo para el footer */
+footer {
+    margin-top: 10px;
+    background-color: #3295ff; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color del texto */
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño del texto */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para diseño */
+}
+
+footer a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}

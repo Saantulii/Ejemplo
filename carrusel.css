@@ -1,0 +1,7 @@
+/* Ajustando el tamaño de las imágenes en el carrusel */
+.carousel-image {
+    width: 100%;   /* Hace que la imagen ocupe todo el ancho disponible */
+    height: 400px; /* Puedes ajustar el alto según lo desees */
+    object-fit: cover; /* Asegura que la imagen se recorte para llenar el área sin distorsionarse */
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <link rel="stylesheet" href="producto.css">
+    <script src="script.js" defer></script>
+    <script src="producto.js" defer></script>
+
+    <!--ICON de carrito de compras-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="carrito.js" defer></script>
+
+    <!--FOOTER-->
+    <link rel="stylesheet" href="footer.css">
+    <title>Carrito</title>
+</head>
+<body>
+    <header>
+        <h1 class="h1">OCN</h1>
+        <div class="buscador">
+          <input type="text">
+        </div>
+        <div class="carrito-icono" id="carrito-icono">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="contador" id="contador">0</span>
+        </div>
+    </header>
+
+    <nav>
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="producto.html">Productos</a></li>
+          <li><a href="carrito.html">Carrito</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+  </nav>
+
+      <!-- Carrito deslizable -->
+      <aside id="carrito" class="carrito">
+        <button id="cerrar-carrito" class="btn-cerrar">×</button>
+        <h2>Carrito de Compras</h2>
+        <div class="carrito-lista"></div>
+        <p class="carrito-total">Total: $<span>0</span></p>
+        <button class="btn-finalizar">Finalizar Compra</button>
+    </aside>
+
+    <footer>
+        <p>© 2025 todos los derechos reservados - <a href="https://saantulii.github.io/portafolio-SEM/" target="_blank" rel="noopener noreferrer"> Saantulii </a></p>
+      </footer>
+</body>
+</html>

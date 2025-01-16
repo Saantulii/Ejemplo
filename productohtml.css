@@ -1,0 +1,84 @@
+.detalle-producto {
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.detalle-producto img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.detalle-producto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.detalle-producto button:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor principal */
+.detalle-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Detalle del producto */
+.detalle-producto {
+    text-align: center;
+}
+
+.detalle-producto img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.detalle-producto .btn-agregar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.detalle-producto .btn-agregar:hover {
+    background-color: #218838;
+}
+
+/* Imágenes relacionadas */
+.imagenes-relacionadas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.imagenes-relacionadas img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.imagenes-relacionadas img:hover {
+    transform: scale(1.1);
+    border-color: #007bff;
+}

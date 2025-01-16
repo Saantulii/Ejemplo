@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #007bff;
+    padding: 1rem 0;
+}
+
+.h1{
+    color: white;
+    justify-content: start;
+    margin-left: 6%;
+}
+
+.buscador {
+    text-align: center; /* Centra el contenido si es necesario */
+}
+
+.buscador input {
+    border-radius: 15px; /* Aplica bordes redondeados al input */
+    border: 2px solid #000; /* Color y grosor del borde */
+    padding: 2px; /* Espaciado interno para mejor apariencia */
+    width: 20%; /* Ajusta el ancho si lo necesitas */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+
+/* Estilo del ícono del carrito */
+.carrito-icono {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+
+.carrito-icono ion-icon {
+    font-size: 2.5rem;
+}
+
+.carrito-icono .contador {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-size: 0.8rem;
+    margin-left: -10px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carrito deslizable */
+.carrito {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f8f8;
+    box-shadow: -3px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.carrito.activo {
+    right: 0;
+}
+
+.carrito .btn-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.carrito .carrito-total {
+    font-weight: bold;
+    margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+    /* Personalización básica de la scrollbar */
+    body::-webkit-scrollbar {
+        width: 12px; /* Ancho de la scrollbar */
+        background-color: #f1f1f1; /* Color del track (fondo de la scrollbar) */
+    }
+    
+    /* Estilo del "thumb" (parte móvil de la scrollbar) */
+    body::-webkit-scrollbar-thumb {
+        background-color: #007bff; /* Color del thumb */
+        border-radius: 10px; /* Bordes redondeados */
+        border: 3px solid #f1f1f1; /* Espacio entre el thumb y el track */
+        transition: background-color 0.3s ease; /* Animación para el hover */
+    }
+    
+    /* Hover en el "thumb" */
+    body::-webkit-scrollbar-thumb:hover {
+        background-color: #0056b3; /* Color al pasar el cursor */
+    }
+    
+    /* Estilo del "track" (fondo de la scrollbar) */
+    body::-webkit-scrollbar-track {
+        background-color: #e0e0e0; /* Color del track */
+    }
+    
+    /* Hover en el "track" (no es visible en todos los navegadores) */
+    body::-webkit-scrollbar-track:hover {
+        background-color: #d6d6d6; /* Color del track al pasar el cursor */
+    }
+       /* Estilo para ocultar la barra de scroll en el iframe */
+       iframe {
+                width: 100%;
+                border: none; /* Elimina bordes del iframe */
+            }
+            iframe::-webkit-scrollbar {
+                display: none; /* Oculta la scrollbar del contenido del iframe */
+            }

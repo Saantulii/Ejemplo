@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="productohtml.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="productohtml.js"></script>
+
+     <!--ICON de carrito de compras-->
+    <link rel="stylesheet" href="carrito.css">
+    <script src="carrito.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+
+    <!--FOOTER-->
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="h1">OCN</h1>
+        <div class="buscador">
+            <input type="text">
+          </div>
+        <div class="carrito-icono" id="carrito-icono">
+            <ion-icon name="cart-outline"></ion-icon>
+            <span class="contador" id="contador">0</span>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
+    
+
+        <!-- Carrito deslizable -->
+        <aside id="carrito" class="carrito">
+            <button id="cerrar-carrito" class="btn-cerrar">×</button>
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-lista"></div>
+            <p class="carrito-total">Total: $<span>0</span></p>
+            <button class="btn-finalizar">Finalizar Compra</button>
+        </aside>
+
+
+    <!-- Contenedor principal del producto -->
+    <div class="detalle-contenedor">
+        <!-- Detalle del producto -->
+        <div id="producto-detalle" class="detalle-producto">
+            <!-- Aquí se cargará el contenido dinámico -->
+        </div>
+
+        <!-- Imágenes relacionadas -->
+        <div class="imagenes-relacionadas" id="imagenes-relacionadas">
+            <!-- Las imágenes relacionadas se generarán dinámicamente -->
+        </div>
+    </div>
+
+
+    <footer>
+        <p>© 2025 todos los derechos reservados - <a href="https://saantulii.github.io/portafolio-SEM/" target="_blank" rel="noopener noreferrer"> Saantulii </a></p>
+      </footer>
+    
+    <script>
+        // Array de imágenes relacionadas
+        const productos = [
+    { src: "camisa del negro.jpg", alt: "Camiseta con corbata" },
+    { src: "pantalon del negro.jpg", alt: "Pantalón overside" },
+    { src: "chomba de santi.jpg", alt: "Chomba" },
+    { src: "conjunto de jeans del negro.jpeg", alt: "Conjunto de Jeans" },
+    { src: "zapatillas del negro.jpg", alt: "Zapatilla" },
+    { src: "vicera del ngro.jpg", alt: "Gorra MLB" }
+];
+
+
+        // Función para mezclar el array (Fisher-Yates Shuffle)
+        function mezclarArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Mezclar y mostrar imágenes relacionadas
+        const imagenesRelacionadas = document.getElementById("imagenes-relacionadas");
+        const productosMezclados = mezclarArray(productos);
+
+        productosMezclados.slice(0, 3).forEach(producto => {
+            const img = document.createElement("img");
+            img.src = producto.src;
+            img.alt = producto.alt;
+            img.classList.add("imagen-relacionada");
+            imagenesRelacionadas.appendChild(img);
+
+            // Agregar evento para actualizar la imagen principal
+            img.addEventListener("click", () => {
+                document.getElementById("producto-imagen").src = producto.src;
+            });
+        });
+    </script>
+</body>
+</html>
